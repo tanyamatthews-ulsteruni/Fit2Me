@@ -29,7 +29,7 @@ export class ExercisesPage {
   		this.restProvider.getExercises()
     .then(data => {
       this.exercises = data.results;
-      console.log(this.exercises);
+      //console.log(this.exercises);
     });
   	}
 
