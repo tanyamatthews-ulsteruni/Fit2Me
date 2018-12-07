@@ -4,9 +4,12 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { RestProvider } from '../providers/rest/rest';
  
 import { MyApp } from './app.component';
-import { PeopleServiceProvider } from '../providers/people-service/people-service';
  
 @NgModule({
   declarations: [
@@ -14,6 +17,7 @@ import { PeopleServiceProvider } from '../providers/people-service/people-servic
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -25,7 +29,7 @@ import { PeopleServiceProvider } from '../providers/people-service/people-servic
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
-    PeopleServiceProvider
+    RestProvider
   ]
 })
 export class AppModule {}
