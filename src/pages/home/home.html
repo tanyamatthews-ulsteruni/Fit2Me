@@ -1,14 +1,6 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Fit2Me
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  Welcome
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-tabs>
+    <ion-tab [root]="profileRoot" tabTitle="Profile" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="goalsRoot" tabTitle="Goals" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="exercisesRoot" tabTitle="Exercises" tabIcon="information-circle"></ion-tab>
+    <ion-tab [root]="workoutsRoot" tabTitle="Workouts" tabIcon="information-circle"></ion-tab>
+</ion-tabs>
