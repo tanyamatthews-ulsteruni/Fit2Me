@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthService } from '../../providers/auth-service/auth-service';
 
+
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  profileRoot = 'ProfilePage'
+  goalsRoot = 'GoalsPage'
+  exercisesRoot = 'ExercisesPage'
+  workoutsRoot = 'WorkoutsPage'
 
-  }
+
+  constructor(public navCtrl: NavController) {}
 
 }
