@@ -9,21 +9,11 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class ExercisesPage {
 
-	users: any;
 	exercises: any; 
 
 	constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
-		this.getUsers();
 		this.getExercises();
 	}
-
-	getUsers() {
-    this.restProvider.getUsers()
-    .then(data => {
-      this.users = data;
-      console.log(this.users);
-    });
-  	}
 
   	getExercises(){
   		this.restProvider.getExercises()
