@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
 @IonicPage()
@@ -11,7 +11,7 @@ export class ExercisesPage {
 
 	exercises: any; 
 
-	constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
+	constructor(public navCtrl: NavController, public restProvider: RestProvider) {
 		this.getExercises();
 	}
 
